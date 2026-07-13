@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "202825633834",
+    "project_id": "ezposrheachen",
+    "storage_bucket": "ezposrheachen.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202825633834:android:d9e0accd365a912e38f353",
+        "android_client_info": {
+          "package_name": "com.example.ezposfinalproj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202825633834-dkrdc1id022dmib6c651777g2hpfom9p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ezposfinalproj",
+            "certificate_hash": "0471c4b6912d6e4532c138d58074439a834ce578"
+          }
+        },
+        {
+          "client_id": "202825633834-nilhlmo4jqla5jt095b2251jb1nqe0r3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxvD0IjCuZGJ84_lX9UsxJxpNErk_8UW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202825633834-nilhlmo4jqla5jt095b2251jb1nqe0r3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "202825633834-f328lab6n782l8dh74i59lcbappqvhd1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ezposfinalproj"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

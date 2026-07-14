@@ -97,7 +97,59 @@ class _POSPageState extends State<POSPage> {
                           margin: const EdgeInsets.only(bottom: 10),
                           decoration: neoBox(shadow: 2),
                           child: ListTile(
-                            leading: Text(p.emoji, style: const TextStyle(fontSize: 24)),
+                            // UPDATED: Now uses identical fallback image structure as your Inventory screen
+                            leading: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: p.imagePath != null && p.imagePath!.isNotEmpty
+                                  ? Image.network(
+                                      p.imagePath!,
+                                      width: 45,
+                                      height: 45,
+                                      fit: BoxFit.cover,
+                                      loadingBuilder: (context, child, loadingProgress) {
+                                        if (loadingProgress == null) return child;
+                                        return Container(
+                                          width: 45,
+                                          height: 45,
+                                          alignment: Alignment.center,
+                                          child: const SizedBox(
+                                            width: 15,
+                                            height: 15,
+                                            child: CircularProgressIndicator(strokeWidth: 2),
+                                          ),
+                                        );
+                                      },
+                                      errorBuilder: (context, error, stackTrace) {
+                                        return Container(
+                                          width: 45,
+                                          height: 45,
+                                          decoration: BoxDecoration(
+                                            color: Colors.grey.shade200,
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          child: const Icon(
+                                            Icons.image_not_supported,
+                                            color: Colors.grey,
+                                            size: 20,
+                                          ),
+                                        );
+                                      },
+                                    )
+                                  : Container(
+                                      width: 45,
+                                      height: 45,
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey.shade200,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          p.emoji,
+                                          style: const TextStyle(fontSize: 20),
+                                        ),
+                                      ),
+                                    ),
+                            ),
                             title: Text(p.name, style: const TextStyle(fontWeight: FontWeight.bold)),
                             subtitle: Text(p.price),
                             trailing: IconButton(
@@ -119,7 +171,7 @@ class _POSPageState extends State<POSPage> {
   }
 
   void openScanner(List<Product> allProducts) {
-    final MobileScannerController scannerController = MobileScannerController();
+    final MobileScannerController scannerController = MobileScannerController(autoStart: true, facing: CameraFacing.back, detectionSpeed: DetectionSpeed.normal, returnImage: false);
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -143,6 +195,7 @@ class _POSPageState extends State<POSPage> {
                         addToCart(modalContext, p);
                         Future.delayed(const Duration(milliseconds: 800), () {
                           if (mounted) {
+                            scannerController.stop();
                             scannerController.dispose();
                             Navigator.pop(modalContext);
                           }
@@ -158,6 +211,7 @@ class _POSPageState extends State<POSPage> {
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: AppModals.neoButton("CLOSE", Colors.white, Colors.black, () {
+                scannerController.stop();
                 scannerController.dispose();
                 Navigator.pop(modalContext);
               }),
@@ -187,9 +241,9 @@ class _POSPageState extends State<POSPage> {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
                     decoration: neoBox(color: AppColors.softYellow, shadow: 1, radius: 8),
-                    child: const Text("POINT OF SALE", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18)),
+                    child: const Text("🖥️ POINT OF SALE", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18)),
                   ),
-                  Container(padding: const EdgeInsets.all(8), decoration: neoBox(color: Colors.white, shadow: 1), child: Text("${cart.length} ITEMS", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)))
+                  Container(padding: const EdgeInsets.all(8), decoration: neoBox(color: Colors.white, shadow: 1), child: Text("${cart.length} ITEMS", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)))
                 ]),
                 const SizedBox(height: 25),
                 Row(children: [

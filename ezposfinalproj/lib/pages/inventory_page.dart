@@ -54,7 +54,7 @@ class _InventoryPageState extends State<InventoryPage> {
                             radius: 8,
                           ),
                           child: const Text(
-                            "INVENTORY",
+                            "📦 INVENTORY",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
@@ -84,7 +84,7 @@ class _InventoryPageState extends State<InventoryPage> {
                               shadow: _isAddPressed ? 1 : 3,
                             ),
                             child: const Text(
-                              "ADD ITEM",
+                              "✚ ADD ITEM",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold),
                             ),
@@ -97,11 +97,11 @@ class _InventoryPageState extends State<InventoryPage> {
 
                     Row(
                       children: [
-                        _stat("${products.length}", "ITEMS"),
+                        _stat("${products.length}", "🛍️ ITEMS"),
                         const SizedBox(width: 10),
                         _stat(
                           "$lowStock",
-                          "LOW STOCK",
+                          "⚠️ LOW STOCK",
                           color: AppColors.errorRed,
                         ),
                       ],
@@ -145,7 +145,7 @@ class _InventoryPageState extends State<InventoryPage> {
                       ),
                       child: Container(
                         margin:
-                            const EdgeInsets.only(bottom: 22),
+                            const EdgeInsets.only(bottom: 13),
                         padding: const EdgeInsets.all(15),
                         decoration: neoBox(),
                         child: Row(
@@ -302,7 +302,7 @@ class _InventoryPageState extends State<InventoryPage> {
                 l,
                 style: const TextStyle(
                   color: Colors.white70,
-                  fontSize: 8,
+                  fontSize: 12,
                 ),
               ),
             ],

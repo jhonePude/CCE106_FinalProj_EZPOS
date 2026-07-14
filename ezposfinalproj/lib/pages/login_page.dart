@@ -93,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Container(
                 width: double.infinity, padding: const EdgeInsets.all(18), 
                 decoration: neoBox(color: _isSignInPressed ? const Color.fromARGB(255, 18, 90, 180) : const Color.fromARGB(255, 24, 119, 242), shadow: _isSignInPressed ? 1 : 4), 
-                child: const Center(child: Text("SIGN IN", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)))
+                child: const Center(child: Text("Sign In", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)))
               )
             ),
             
@@ -111,7 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Image.asset('assets/googlelogo.png', height:24, width:24, fit: BoxFit.contain), 
                   const SizedBox(width: 10), 
-                  const Text("GOOGLE SIGN IN", style: TextStyle(fontWeight: FontWeight.bold))
+                  const Text("Google Sign-in", style: TextStyle(fontWeight: FontWeight.bold))
                 ])
               )
             ),

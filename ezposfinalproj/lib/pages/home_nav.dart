@@ -6,6 +6,7 @@ import 'history_page.dart';
 import 'login_page.dart';
 import 'loading_page.dart';
 import '../services/auth_service.dart';
+import '../widgets/app_modals.dart'; // ADDED TO SUPPORT THE CONFIRMATION DIALOG
 
 class HomeNav extends StatefulWidget {
   const HomeNav({super.key});
@@ -38,13 +39,29 @@ class _HomeNavState extends State<HomeNav> {
     bool isActive = _currentIndex == index;
     return GestureDetector(
       onTap: () async {
-      if (index == 3) {
-        await AuthService().signOut(); // Sign out from Firebase
-        if (mounted) Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LoadingPage(message: "Logging out...", nextPage: LoginPage())));
-      } else {
-        setState(() => _currentIndex = index);
-      }
-    },
+        if (index == 3) {
+          // TRiggers confirmation using your themed modal rather than logging out instantly
+          AppModals.showConfirmation(
+            context: context,
+            title: "LOG OUT OF YOUR ACCOUNT?",
+            icon: Icons.logout,
+            actionColor: AppColors.errorRed,
+            onConfirm: () async {
+              await AuthService().signOut(); // Sign out from Firebase
+              if (mounted) {
+                Navigator.pushReplacement(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context) => const LoadingPage(message: "Logging out...", nextPage: LoginPage())
+                  )
+                );
+              }
+            },
+          );
+        } else {
+          setState(() => _currentIndex = index);
+        }
+      },
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Container(
           padding: const EdgeInsets.all(8), 

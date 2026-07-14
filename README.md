@@ -29,7 +29,7 @@ The entry point of the application requires store administrators or staff to aut
 
 | Login Screen | Google Authentication Loading |
 | :---: | :---: |
-| ![Login Page](C:\Users\Administrator\Desktop\CCE106%20SIR%20VELEZ\PICTURES%20FINAL\08854b9d-33f2-46e7-809e-4a422e67c3d8.jpg) | ![Google Sign-In](C:\Users\Administrator\Desktop\CCE106%20SIR%20VELEZ\PICTURES%20FINAL\0368d515-93a0-4121-a945-d6991a8f35d2.jpg) |
+| ![Login Page](./PICTURES%20FINAL/08854b9d-33f2-46e7-809e-4a422e67c3d8.jpg) | ![Google Sign-In](./PICTURES%20FINAL/0368d515-93a0-4121-a945-d6991a8f35d2.jpg) |
 
 #### Registration Page (Sign Up)
 New staff or store administrators can register by creating an account. The registration form collects:
@@ -38,7 +38,7 @@ New staff or store administrators can register by creating an account. The regis
 * Contact Number
 * Password
 
-![Sign Up Page](C:\Users\Administrator\Desktop\CCE106%20SIR%20VELEZ\PICTURES%20FINAL\aa166564-2b66-43de-82f1-b603aff93bec.jpg)
+![Sign Up Page](./PICTURES%20FINAL/aa166564-2b66-43de-82f1-b603aff93bec.jpg)
 
 ---
 
@@ -50,7 +50,7 @@ Once logged in, users are directed to the main **POS Dashboard**, which serves a
 * **Barcode Scanning & Search:** Quickly search for items manually or trigger the device camera to scan barcodes.
 * **Total Calculation:** Real-time updating of the total amount at the bottom of the screen before proceeding to checkout.
 
-![POS Page](C:\Users\Administrator\Desktop\CCE106%20SIR%20VELEZ\PICTURES%20FINAL\00c58e4c-b1eb-4d5a-bda8-5a2fd3fac21b.jpg)
+![POS Page](./PICTURES%20FINAL/00c58e4c-b1eb-4d5a-bda8-5a2fd3fac21b.jpg)
 
 ---
 
@@ -67,7 +67,7 @@ Upon pressing the payment button, a success modal overlays the screen confirming
 
 | Checkout Screen | Payment Confirmation |
 | :---: | :---: |
-| ![Checkout Screen](C:\Users\Administrator\Desktop\CCE106%20SIR%20VELEZ\PICTURES%20FINAL\bcde57c4-bd6b-4238-bd30-7f912f8efc3a.jpg) | ![Success Dialog](C:\Users\Administrator\Desktop\CCE106%20SIR%20VELEZ\PICTURES%20FINAL\e9a0a7b0-3c6d-41a6-80fc-043c880601ce.jpg) |
+| ![Checkout Screen](./PICTURES%20FINAL/bcde57c4-bd6b-4238-bd30-7f912f8efc3a.jpg) | ![Success Dialog](./PICTURES%20FINAL/e9a0a7b0-3c6d-41a6-80fc-043c880601ce.jpg) |
 
 ---
 
@@ -86,7 +86,7 @@ The **Add Item** button opens a modal form allowing staff to expand the store in
 
 | Stock Inventory | Add Item Modal |
 | :---: | :---: |
-| ![Inventory Page](C:\Users\Administrator\Desktop\CCE106%20SIR%20VELEZ\PICTURES%20FINAL\c5d63a16-5471-47a4-95b5-daa90046b2b3.jpg) | ![Add Item Modal](C:\Users\Administrator\Desktop\CCE106%20SIR%20VELEZ\PICTURES%20FINAL\ae6bffe8-fcb1-49a7-aba5-c8102c4057cb.jpg) |
+| ![Inventory Page](./PICTURES%20FINAL/c5d63a16-5471-47a4-95b5-daa90046b2b3.jpg) | ![Add Item Modal](./PICTURES%20FINAL/ae6bffe8-fcb1-49a7-aba5-c8102c4057cb.jpg) |
 
 ---
 
@@ -101,7 +101,7 @@ Tapping on any product from the inventory list opens its detailed card:
 
 | Coke Details | Red Horse Details |
 | :---: | :---: |
-| ![Coke Barcode Details](C:\Users\Administrator\Desktop\CCE106%20SIR%20VELEZ\PICTURES%20FINAL\0299c904-ec05-4271-a262-5c23e15002d4.jpg) | ![Red Horse Barcode Details](C:\Users\Administrator\Desktop\CCE106%20SIR%20VELEZ\PICTURES%20FINAL\38ac1016-7fef-42a2-9fec-216fb5e1995f.jpg) |
+| ![Coke Barcode Details](./PICTURES%20FINAL/0299c904-ec05-4271-a262-5c23e15002d4.jpg) | ![Red Horse Barcode Details](./PICTURES%20FINAL/38ac1016-7fef-42a2-9fec-216fb5e1995f.jpg) |
 
 ---
 
@@ -111,7 +111,7 @@ The **History** tab compiles past transaction data to help track store performan
 * **Revenue Overview:** Displays **Total Revenue** and **Transaction Count (TXN Count)** at the top.
 * **Sales Feed:** A chronological timeline of completed transactions showing the date, exact timestamp, total amount, and a receipt icon for reference.
 
-![Sales History Page](C:\Users\Administrator\Desktop\CCE106%20SIR%20VELEZ\PICTURES%20FINAL\5b7f49c0-1e86-4195-be8f-b6e18f3243fb.jpg)
+![Sales History Page](./PICTURES%20FINAL/5b7f49c0-1e86-4195-be8f-b6e18f3243fb.jpg)
 
 ---
 

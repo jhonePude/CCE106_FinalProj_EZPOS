@@ -27,7 +27,7 @@ class _HistoryPageState extends State<HistoryPage> {
           }
           return Column(children: [
             Container(padding: const EdgeInsets.only(top: 60, bottom: 25, left: 20, right: 20), decoration: neoGradientBox(), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              // UPDATED: NEO-BRUTALIST TITLE LABEL
+             
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
                 decoration: neoBox(color: AppColors.softYellow, shadow: 1, radius: 8),

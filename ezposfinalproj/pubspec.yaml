@@ -52,12 +52,25 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
+  flutter_launcher_icons: ^0.14.3
   flutter_lints: ^6.0.0
+  flutter_native_splash: ^2.4.6
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logoicon.jpg"
+
+flutter_native_splash:
+  color: "#FFFFFF"      # Background color
+  image_path: assets/splash.png
+
+  android: true
+  ios: true
+
+  android_12:
+    image_path: assets/splash.png
+    color: "#FFFFFF"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -76,6 +89,8 @@ flutter:
     - assets/logo.png
     - assets/sounds/pop.mp3
     - assets/sounds/apple_pay.mp3
+    - assets/logoicon.jpg
+    - assets/splash.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

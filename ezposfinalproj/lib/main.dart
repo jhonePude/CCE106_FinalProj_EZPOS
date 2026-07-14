@@ -4,11 +4,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'firebase_options.dart';
 import 'pages/login_page.dart';
 import 'pages/home_nav.dart';
+import 'pages/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MaterialApp(debugShowCheckedModeBanner: false, home: AuthGate()));
+  runApp(const MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen()));
 }
 
 class AuthGate extends StatelessWidget {
